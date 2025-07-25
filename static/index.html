@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Web Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <button id="new-chat-btn">+ Nova Conversa</button>
+            <div class="models-section">
+                <h3>Modelos</h3>
+                <select id="model-select"></select>
+                <button id="delete-model-btn">Deletar Selecionado</button>
+            </div>
+            <hr>
+            <h3>Conversas</h3>
+            <ul id="chat-history">
+                </ul>
+        </aside>
+        <main class="chat-area">
+            <div id="chat-messages">
+                <div class="message welcome">
+                    <p>Selecione um modelo e inicie a conversa.</p>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <div id="image-preview-container"></div>
+                <textarea id="prompt-input" placeholder="Digite sua mensagem aqui..."></textarea>
+                <label for="file-input" class="file-label">📎</label>
+                <input type="file" id="file-input" accept="image/*" multiple style="display: none;">
+                <button id="send-btn">Enviar</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
